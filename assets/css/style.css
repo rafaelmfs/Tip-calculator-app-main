@@ -8,14 +8,19 @@
     --strongCyan: hsl(172, 67%, 45%);
 }
 
-
 body{
     background-color: var(--lightGrayishCyanOne);
     font-family: 'Space Mono', monospace;
+
+    overflow: hidden;
 }
 
 header h2{
     text-align: center;
+    color: var(--darkGrayishCyanOne);
+
+    letter-spacing: 4px;
+    line-height: 24px;
 }
 
 .container{
@@ -45,6 +50,10 @@ header h2{
 
 }
 
+.calculator h4{
+    color: var(--darkGrayishCyanOne);
+}
+
 .input-area{
     width: 95%;
     position: relative;
@@ -62,9 +71,34 @@ header h2{
     margin: 4px 0;
 
     background: var(--lightGrayishCyan);
+    color: var(--veryDarkCyan);
+
+    font-weight: 600;
     font-size: 1.6rem;
 
 
+}
+
+.input-area input:hover{
+    cursor: pointer;
+    border: 2px solid var(--strongCyan);
+}
+
+input.invalid{
+    border: 2px solid red;
+    color: red;
+}
+
+.title-calc{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.title-calc .error{
+    color: red;
+    font-weight: bold;
+    display: none;
 }
 
 .input-area svg{
@@ -103,17 +137,15 @@ label.tips{
 
 }
 
-#custom{
-    background-color:var(--lightGrayishCyan);
-    color: var(--darkGrayishCyan);
-}
+label.tips:hover{
+    cursor: pointer;
+    background-color: var(--lightGrayishCyanOne);
+    color: var(--veryDarkCyan);
 
-#inpt-custom{
-    width: 90%;
-    height: 30px;
+    margin: 1%;
+    transition: 300ms;
+    
 
-    border-radius: 4px;
-    margin-top: 2%;
 }
 
 label.selected, #custom.selected{
@@ -121,12 +153,122 @@ label.selected, #custom.selected{
     color: var(--veryDarkCyan);
 }
 
+#custom{
+    background-color:var(--lightGrayishCyan);
+    color: var(--darkGrayishCyan);
+}
+
+
+#inpt-custom{
+    width: 90%;
+    height: 30px;
+    
+    margin-top: 2%;
+
+    color: var(--veryDarkCyan);
+    font-weight: bold;
+
+    border-radius: 4px;
+    border: 2px solid var(--strongCyan);
+    
+}
+
+
+
 
 .result{
-    padding: 8px;
+    padding: 5%;
 
     width: 50%;
 
     border-radius: 16px;
     background-color:var(--veryDarkCyan);
+}
+
+.result h4{
+    color: var(--whiteH);
+}
+
+.result p{
+    margin: 0;
+    color: var(--darkGrayishCyan);
+
+    font-weight: 600;
+
+}
+
+#result-tip, #result-total{
+    font-weight: bold;
+    font-size: 3rem;
+    color: var(--strongCyan);
+
+}
+
+.result-tip{
+    margin-bottom: 12%;
+}
+
+.result-tip, .result-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reset{
+    width: 100%;
+    margin-top: 30%;
+}
+
+#button-reset{
+    width: 100%;
+    
+    padding: 12px;
+    
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    border-radius: 6px;
+    border: none;
+
+    box-shadow: 4px 2px 6px -2px hsl(183, 95%, 24%);
+
+    background-color: var(--strongCyan);
+    color: var(--veryDarkCyan);
+
+}
+
+#button-reset:hover{
+    cursor: pointer;
+    background-color: var(--lightGrayishCyanOne);
+
+    transition: 300ms;
+    padding: 16px;
+}
+
+
+@media(max-width:920px){
+    body{
+        overflow: auto;
+    }
+    .container{
+        padding: 5%;
+    }
+    .content{
+        flex-direction: column;
+        justify-content: center;
+
+        padding: 0;
+        margin: 0;
+    }
+    .calculator, .result{
+        width: 90%;
+    }
+
+}
+
+@media(max-width:430px){
+    label.tips{
+        padding: 5% 20%;
+    }
 }
