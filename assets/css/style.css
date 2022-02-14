@@ -79,9 +79,12 @@ header h2{
 
 }
 
-.input-area input:hover{
+.input-area input:hover, .input-area input:focus{
     cursor: pointer;
-    border: 2px solid var(--strongCyan);
+    border: 1.5px solid var(--strongCyan);
+
+    box-shadow: 2px 2px 8px -2px hsla(183, 98%, 23%, 0.404);
+
 }
 
 input.invalid{
@@ -142,10 +145,9 @@ label.tips:hover{
     background-color: var(--lightGrayishCyanOne);
     color: var(--veryDarkCyan);
 
-    margin: 1%;
     transition: 300ms;
-    
 
+    box-shadow: 4px 6px 8px -2px hsla(183, 98%, 23%, 0.404);
 }
 
 label.selected, #custom.selected{
@@ -243,11 +245,14 @@ label.selected, #custom.selected{
     background-color: var(--lightGrayishCyanOne);
 
     transition: 300ms;
-    padding: 16px;
+    padding: 14px;
+    
 }
 
-
 @media(max-width:920px){
+    html{
+        font-size: 62.5%;
+    }
     body{
         overflow: auto;
     }

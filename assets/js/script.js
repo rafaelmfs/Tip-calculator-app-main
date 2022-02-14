@@ -1,29 +1,19 @@
+    import format from "./format.js";
+    import { getTip } from "./tips.js";
+
     const bill = document.querySelector("#inpt-bill");
     const radio = document.querySelectorAll('.tips');
     const content = document.querySelector('.content');
     const custom = document.querySelector("#inpt-custom");
+    const people = document.querySelector('#number-people');
+    const resultTip = document.querySelector("#result-tip");
+    const resultTotal = document.querySelector("#result-total");
+    const btnReset = document.querySelector("#button-reset");
 
-    function formatarMoeda(element) {
-      let val = element.value;
 
-      val = val + '';
-      console.log(val)
-      val = parseInt(val.replace(/[\D]+/g, ''));
-      console.log(val)
-      val = val + '';
-      console.log(val)
-      val = val.replace(/([0-9]{2})$/g, ",$1");
-      console.log(val)
 
-      if (val.length > 6) {
-          val = val.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
-      }
+    bill.addEventListener('keyup', (e) => format(bill));
 
-      element.value = val;
-      if(val == 'NaN') element.value = '';
-    }
-
-    bill.addEventListener('keyup', (e) => formatarMoeda(bill));
     content.addEventListener('click', (e) =>{
         for(let i of radio){
           if(i.checked){
@@ -33,4 +23,27 @@
             i.parentNode.classList.remove('selected');
           }
         }
+        if(people.value != ""){
+          //
+          console.log(getTip());
+        }
     })
+
+    people.addEventListener('focus', ()=>{
+      //
+    })
+
+    btnReset.addEventListener('click', ()=>{
+      let tips = document.querySelectorAll('.tips');
+      for(let tip of tips){
+        tip.checked = false;
+        tip.classList.remove('.selected');
+      }
+      bill.value = '';
+      people.value = '';
+      custom.value = '';
+      custom.style.display = 'none';
+      resultTip.innerHTML = "$0.00";
+      resultTotal.innerHTML = "$0.00";
+    });
+     
