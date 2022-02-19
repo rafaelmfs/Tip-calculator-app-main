@@ -27,7 +27,7 @@
           <div>
             <div class="title-calc">
               <h4>Bill</h4>
-              <p class="error">text</p>
+              <p class="error" id="bill-empty">bill's can't be empty</p>
             </div>
             <div class="input-area">
               <input type="text" id="inpt-bill" name="bill" id="bill">
@@ -38,7 +38,6 @@
           <div>
             <div class="title-calc">
               <h4>Select Tip %</h4> 
-              <p class="error">text</p>
             </div>
             <div class="percents">
               <label class="tips"> 5%<input type="radio" value="5" name="tip" class="tips" hidden></label> 
@@ -54,7 +53,7 @@
           <div>
             <div class="title-calc">
               <h4>Number of People</h4>
-              <p class="error">text</p>
+              <p class="error" id="people-zero">Can't be zero</p>
             </div>
            <div class="input-area">
              <input type="number" min="0.00" id="number-people" placeholder="0">
@@ -70,14 +69,14 @@
               <h4>Tip Amount</h4>
               <p>/ person</p>
             </div>
-            <div id="result-tip">$5.00</div>
+            <div id="result-tip">$0.00</div>
           </div>
           <div class="result-total">
             <div>
               <h4>Total</h4>
               <p>/ person</p> 
             </div>
-            <div id="result-total">$47.00</div>
+            <div id="result-total">$0.00</div>
           </div>
           <div class="reset">
             <button id="button-reset">Reset</button>
@@ -91,7 +90,7 @@
     Coded by <a href="https://github.com/rafaelmfs" target="_blank">Rafael Marques</a>.
   </footer>
 
-  <script type="module" src="./assets/js/script.js"></script>
+  <script type="module" src="./assets/js/main.js"></script>
 
 </body>
 </html>
