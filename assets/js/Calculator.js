@@ -1,7 +1,8 @@
 export default class Claculator{
     constructor(nPeople, valueAccount, tipPercent = 0){
+        this.valueAccount = Number(valueAccount.replace('.', '').replace(',', '.'));
+        console.log(valueAccount, this.valueAccount);
         this.nPeople = Number(nPeople.replace(/\D+/g, ''));
-        this.valueAccount = Number(valueAccount.replace(',', '.'));
         this.tipPercent = Number(tipPercent);
     }
 

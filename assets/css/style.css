@@ -8,6 +8,12 @@
     --strongCyan: hsl(172, 67%, 45%);
 }
 
+*{
+    magin:0;
+    padding: 0;
+
+}
+
 body{
     background-color: var(--lightGrayishCyanOne);
     font-family: 'Space Mono', monospace;
