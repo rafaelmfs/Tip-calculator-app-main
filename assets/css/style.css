@@ -168,6 +168,7 @@ label.tips:hover{
 label.selected, #custom.selected{
     background-color:var(--strongCyan);
     color: var(--veryDarkCyan);
+    
 }
 
 #custom{
@@ -198,9 +199,8 @@ label.selected, #custom.selected{
 
     transform: scale(1.05);
     box-shadow: 2px 2px 8px -2px hsla(183, 98%, 23%, 0.404);
-
-
 }
+
 
 /******************* Results */
 
