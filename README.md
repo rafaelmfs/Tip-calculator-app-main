@@ -15,7 +15,7 @@ Os usuários devem ser capazes de:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: https://www.frontendmentor.io/solutions/tip-calculator-app-solution-Niq0MoOLt
 - Live Site URL: https://rafaelmfs.github.io/Tip-calculator-app-main/
 
 ## Meu processo
