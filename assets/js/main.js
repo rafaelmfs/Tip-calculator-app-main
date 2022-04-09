@@ -21,7 +21,7 @@
       for(let i of radio){
         if(i.checked){
           i.value === 'custom' ? 
-            (custom.style.display = 'block', custom.focus())
+            (custom.style.display = 'block')
             : custom.style.display = 'none';
           i.parentNode.classList.add('selected');
 
